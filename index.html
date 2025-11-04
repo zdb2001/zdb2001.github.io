@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的个人主页</title>
+  <meta name="description" content="这是一页式极简个人主页模板，可在 GitHub Pages、Netlify、Vercel 免费托管。">
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --fg: #e5e7eb;
+      --muted: #9aa1a6;
+      --card: #111318;
+      --accent: #60a5fa;
+      --link: #7dd3fc;
+      --border: #1f2430;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --fg: #0b0c10;
+        --muted: #667085;
+        --card: #f7f9fb;
+        --accent: #2563eb;
+        --link: #0284c7;
+        --border: #e5e7eb;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 24px; }
+    header { display: flex; align-items: center; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+    .avatar { width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, var(--accent), var(--link)); display: grid; place-items: center; color: #0b0c10; font-weight: 800; }
+    h1 { font-size: 28px; margin: 0; }
+    .tagline { color: var(--muted); margin-top: 4px; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+    @media (min-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { background: var(--card); border: 1px solid var(--border); padding: 18px; border-radius: 16px; }
+    .card h2 { margin: 0 0 8px; font-size: 18px; }
+    .list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .item { display: grid; gap: 4px; }
+    .item .title { font-weight: 600; }
+    .item .meta { color: var(--muted); font-size: 14px; }
+    footer { margin: 32px 0 12px; color: var(--muted); font-size: 14px; text-align: center; }
+    .links { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+    .btn { display:inline-block; padding:10px 14px; border:1px solid var(--border); background:transparent; border-radius:12px; }
+    .btn:hover { border-color: var(--accent); }
+    .notice { background: rgba(96,165,250,0.12); border: 1px dashed var(--accent); color: var(--fg); padding: 12px; border-radius: 12px; }
+    /* Anchor target offset for hash navigation */
+    :target { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">你</div>
+      <div>
+        <h1>你的名字</h1>
+        <div class="tagline">一句话介绍：学生 / 开发者 / 研究方向关键词</div>
+        <div class="links">
+          <a class="btn" href="#projects">项目</a>
+          <a class="btn" href="#pubs">论文</a>
+          <a class="btn" href="#about">关于</a>
+          <a class="btn" href="#contact">联系</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section id="projects" class="card">
+        <h2>项目 Projects</h2>
+        <ul class="list">
+          <li class="item">
+            <div class="title"><a href="#" target="_blank" rel="noopener">CoolProject</a></div>
+            <div class="meta">2025 · TypeScript / PyTorch · 一句话描述你的贡献和亮点</div>
+          </li>
+          <li class="item">
+            <div class="title"><a href="#" target="_blank" rel="noopener">TinyDiffusion</a></div>
+            <div class="meta">2024 · 推理加速 · 量化/剪枝把延迟降至 XX ms</div>
+          </li>
+          <li class="item">
+            <div class="title"><a href="#" target="_blank" rel="noopener">OpenSourceTool</a></div>
+            <div class="meta">2023 · 开源工具 · 1.2k ⭐ · 被 X 公司内采</div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="pubs" class="card">
+        <h2>论文 Publications</h2>
+        <ul class="list">
+          <li class="item">
+            <div class="title">Paper Title <a href="#" target="_blank">[PDF]</a> <a href="#" target="_blank">[Code]</a></div>
+            <div class="meta">会议 / 年份 · 作者A*, 你, 作者C</div>
+          </li>
+          <li class="item">
+            <div class="title">Workshop Title <a href="#" target="_blank">[PDF]</a></div>
+            <div class="meta">NeurIPS Workshop 2024</div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="about" class="card">
+        <h2>关于 About</h2>
+        <p>一句话定位：我关注 X 场景中的 Y 瓶颈，方法是 Z（2–3 个关键词）。
+        这里写 3–5 句你的研究兴趣、技能栈、最近在做的事。</p>
+        <div class="notice">想要暗/明主题自适应、移动端友好、纯静态可免费托管。</div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>联系 Contact</h2>
+        <p>欢迎邮件交流：<a href="mailto:you@example.com">you@example.com</a></p>
+        <p>社媒：<a href="https://github.com/yourname" target="_blank">GitHub</a> · <a href="https://x.com/yourname" target="_blank">X</a> · <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a></p>
+      </section>
+    </div>
+
+    <footer>© <span id="y"></span> 你的名字 · Made with ♥</footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
